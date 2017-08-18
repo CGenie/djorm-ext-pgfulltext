@@ -76,7 +76,7 @@ if django.VERSION >= (1, 7):
 
             if isinstance(rhs_params, basestring):
                 rhs_params = [rhs_params]
-            elif isinstance(rhs_params, list) and isinstance(rhs_params[0], list):
+            elif isinstance(rhs_params, (list, tuple)) and isinstance(rhs_params[0], (list, tuple)):
                 rhs_params = rhs_params[0]
 
             if type(rhs_params[0]) == TSConfig:
